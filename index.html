@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <title>Heladeria</title>
+  </head>
+ <body>
+   <header>
+      <h1>Heladeria </h1>
+   </header>
+   <main>
+     <!--Sección de presentación-->
+     <section class="intro">
+        <h2>Descubre nuestra selecta variedad de sabores artesanales</h2>
+        <p>Qué sabor te gustaria disfrutar hoy?</p>
+        <button id="btn-sabores">Ver sabores</button>
+     </section>
+     <!--Se agrega contenido dinamico-->
+     <section id="lista-sabores"></section>
+     <!--Sección de buscadores de sabores-->
+     <section class="buscador">
+        <p>Escribe un sabor y descubre si lo tenemos disponible</p>
+        <form id="form-busqueda" action="#">
+           <input type="text" placeholder="Ejemplo:chocolate" value="" id="inp-busqueda" required>
+           <button type="submit" id="btn-buscar">Buscar</button>
+        </form>
+        <!--Se muestra contenido dinamico-->
+        <div id="resultado-busqueda"></div>
+     </section></section>
+     <div id="overlay-confirmacion" class="overlay">
+       <div class="modal" id="contenido-modal">
+          <!-- Aquí JS inyecta el contenido -->
+       </div>
+     </div>
+   </main>
+   <footer>
+      <p> &copy; 2025 Heladeria. Todos los derechos reservados</p>
+   </footer>
+ </body>
+ <script src="./index.js"></script>
+</html>
