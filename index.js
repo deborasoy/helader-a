@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     showResultadoBusqueda();
     showLista();
   });
-//Funcion que cea cada card con data  almacenada en el array
+//Funcion que crea cada card con data  almacenada en el array
 //DOM:funcionalidad del boton para mostrar cada card
 function showLista(){
   document.getElementById("btn-sabores").addEventListener("click", ()=>{
@@ -32,6 +32,7 @@ function showLista(){
            confirmarEleccion(); //funcionalidad boton comprar
       });
 };
+//Funcion para fitrar por rango min y max de precio 
 
 //Funcion para mostrar resultado de la busqueda, si se tiene el sabor consultado
 function showResultadoBusqueda(){
