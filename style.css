@@ -167,7 +167,7 @@ button:hover {
 }
 
 /*Lista de sabores dinámica */
-#lista-sabores {
+.lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -175,7 +175,7 @@ button:hover {
 }
 
 /* Cada card */
-.card-sabor {
+.card {
   background: #fff;
   border-radius: 12px;
   padding: 1rem;
@@ -184,11 +184,11 @@ button:hover {
   transition: transform 0.2s ease;
 }
 
-.card-sabor:hover {
+.card:hover {
   transform: scale(1.03);
 }
 
-.card-sabor img {
+.card img {
   max-width: 100%;
   height: 150px;
   object-fit: cover;
@@ -196,19 +196,19 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
-.card-sabor h3 {
+.card h3 {
   margin-bottom: 0.5rem;
   color: #d6336c;
   font-size: 1.3rem;
 }
 
-.card-sabor .descripcion {
+.card .descripcion {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   color: #555;
 }
 
-.card-sabor .precio {
+.card .precio {
   font-weight: bold;
   font-size: 1rem;
   color: #333;
@@ -282,6 +282,12 @@ footer {
 .overlay.active {
   visibility: visible;
   opacity: 1;
+}
+.oculto{
+   display: none;
+}
+.oculto.active{
+ display: block; 
 }
 
 /* Caja del modal */

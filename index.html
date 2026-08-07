@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,39 +11,46 @@
 <body>
    <!--Barra de navegacion-->
    <nav class="top-bar">
-         <ul class="nav-links">
-            <li><a href="#intro">Catálogo</a></li>
-            <li><a href="#opciones">Clasificación</a></li>
-            <li><a href="#promociones.html">Promociones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-         </ul>
-         <!--Formulario para filtrar por precio minimo y maximo-->
-         <form id="form-filtrar" action="#">
-            <span>Filtrar por precio mínimo y máximo </span>
-            <label for="inp-min">Min:</label>
-            <input type="number" value= 0 id="inp-min" required>
-            <label for="inp-max">Max:</label>
-            <input type="number" value= 0 id="inp-max" required>
-            <button type="submit" id="btn-filtrar">Buscar</button>
-         </form>
-         <!--Boton para ver el carrito de compras-->
-            <button id="btn-carrito">carrito</button>
+      <ul class="nav-links">
+         <li><a href="#">Inicio</a></li>
+         <li><a href="#sabores">Sabores</a></li>
+         <li><a href="#opciones" id="a-presentaciones">Presentaciones</a></li>
+         <li><a href="promociones.html">Promociones</a></li>
+      </ul>
+      <!--Formulario para filtrar por precio minimo y maximo-->
+      <form id="form-filtrar" action="#">
+         <span>Filtrar por precio mínimo y máximo </span>
+         <label for="inp-min">Min:</label>
+         <input type="number" value=0 id="inp-min" required>
+         <label for="inp-max">Max:</label>
+         <input type="number" value=0 id="inp-max" required>
+         <button type="submit" id="btn-filtrar">Buscar</button>
+      </form>
+      <!--Boton para ver el carrito de compras-->
+      <button id="btn-carrito">carrito</button>
    </nav>
    <header>
       <h1>Heladeria </h1>
    </header>
    <main>
-      <!--Se agrega contenido dinamico: boton ver sabores -->
-      <section id="lista-sabores"></section>
-      <!--Sección de presentación-->
-      <section class="intro" id="intro">
+      <!--Seccion que se agrega de forma dinamica-->
+      <section id="opciones" class="oculto">
+         <h3>Clasificación</h3>
+         <p> Aqui conoceras las diferentes presentaciones! Elige la que mas te tiente y experimenta esta explosion de sabor</p>
+      </section>
+      <!--lista de presentaciones de envase-->
+      <section class="lista" id="lista-presentaciones">
+      </section>
+      <section class="intro" id="sabores">
          <h2>Descubre nuestra selecta variedad de sabores artesanales</h2>
          <p>Qué sabor te gustaria disfrutar hoy?</p>
          <button id="btn-sabores">Ver sabores</button>
       </section>
+      <!--Se agrega contenido dinamico: boton ver sabores -->
+      <section id="lista-sabores" class="lista"></section>
       <!--Sección de buscadores de sabores-->
       <section class="buscador">
-          <p>Escribe un sabor y descubre si lo tenemos disponible</p>
+         <p>Escribe un sabor y descubre si lo tenemos disponible</p>
          <form id="form-busqueda" action="#">
             <input type="text" placeholder="Ejemplo:chocolate" value="" id="inp-busqueda" required>
             <button type="submit" id="btn-buscar">Buscar</button>
@@ -55,15 +63,6 @@
             <!-- Aquí JS inyecta el contenido : modal feedback de la compra -->
          </div>
       </div>
-      <!--Seccion que se agrega de forma dinamica :  el enlace del nav-->
-      <section id="opciones" class="overlay">
-         <h3>Clasificación</h3>
-         <p> Aqui conoceras las diferentes presentaciones! Elige la que mas te tiente</p>
-            <div class="modal" id="clasificaciones-modal">
-   
-               <!--Aqui JS inyecta contenido-->
-            </div>
-      </section>
    </main>
    <footer id="contacto">
       <h4>Contacto</h4>
